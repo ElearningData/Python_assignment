@@ -1,0 +1,134 @@
+Write a program to find the factorial of a number
+
+def num_factorial(x):
+ 
+    if (x==1):
+        return 1
+    else:
+
+        return(x * num_factorial(x-1))
+
+n = int(input("Enter number :  "))
+
+print("the factorial of", n, "is" , num_factorial(n))
+Enter number :  5
+the factorial of 5 is 120
+
+
+
+2. Write a program to find whether a number is prime or composite?
+
+num1 = 11
+#num1 = 6
+# if given number is greater than 2
+if num1 >1:
+    # iterate from 2 to n/2
+    for i in range(2, int(num1/2)+1):
+
+        if(num1 % i) == 0:
+
+            print(num1, "is not a prime number")
+
+            break
+
+    else:
+
+            print(num1,"is a prime number")
+
+else:
+
+    print(num1," is not a prime number")
+11 is a prime number
+
+
+
+3. Write a program to check whether a given string is palindrome or not
+
+string= input("enter a string   ")
+if(string == string[::-1]):
+
+    print("the string is palindrome  ")
+else:
+    print("the string is not palindrome  ")
+
+​
+enter a string   madam
+the string is palindrome  
+
+
+
+4. Write a python program to get the third side of right- angled triangle from two given sides
+
+#use biwise operation to add two numbers
+
+def pythagoras(opp_side,adj_side,hypotenuse):
+
+    if opp_side == str("x"):
+
+        return("Opp = "+ str(((hypotenuse**2) - (adj_side**2))**0.5))
+
+    elif adj_side == str("x"):
+
+        return("Adj = "+ str(((hypotenuse**2) - (opp_side**2))**0.5))
+
+    elif hypotenuse == str("x"):
+
+        return("Hypotenuse"+str(((opp_side**2) + (adj_side**2))**0.5))
+
+    else:
+
+        return("You know the answer")
+
+print(pythagoras(3,4,'x'))
+
+print(pythagoras(3,'x',5))
+
+print(pythagoras('x',4,5))
+
+print(pythagoras(3,4,5))
+
+Hypotenuse5.0
+Adj = 4.0
+Opp = 3.0
+You know the answer 
+
+
+5. Write a python program to print the frequency of each of the characters present in the given string
+
+string = input("enter the string   ")
+newstr = list(string)
+
+newlist = []
+
+for j in newstr:
+    
+    if j not in newlist:
+
+        newlist.append(j)
+
+        count = 0
+
+    for i in range(len(newstr)):
+
+        if j == newstr[i]:
+
+            count+=1
+
+    print("{},{}".format(j,count))
+    
+    
+enter the string   abcdeabc
+a,2
+b,2
+c,2
+d,1
+e,1
+a,3
+b,5
+c,7
+
+
+use gitadd
+
+
+    
